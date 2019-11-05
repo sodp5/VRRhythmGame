@@ -33,7 +33,6 @@ public class MusicManager : MonoBehaviour
 
     public void PlaySound(string scale)
     {
-
         if (audio.isPlaying)
             audio.Stop();
 

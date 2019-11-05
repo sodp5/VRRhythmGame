@@ -9,6 +9,12 @@ public class NoteManager : MonoBehaviour
 
     private string pressedKey;
 
+    private void Awake()
+    {
+        if (noteList == null)
+            noteList = new List<GameObject>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +45,6 @@ public class NoteManager : MonoBehaviour
         if (noteList == null)
             noteList = new List<GameObject>();
 
-        Debug.Log("hello im add note");
         noteList.Add(note);
     }
 
@@ -100,5 +105,4 @@ public class NoteManager : MonoBehaviour
     {
         return noteList.Count > 0;
     }
-
 }

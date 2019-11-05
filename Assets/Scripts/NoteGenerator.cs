@@ -42,13 +42,11 @@ public class NoteGenerator : MonoBehaviour
         modelScript.InitNote(key, scale);
 
         GameObject go = Instantiate(notePrefab);
-        Debug.Log("after instantiate");
 
         var managerScript = noteManager.GetComponent<NoteManager>();
         managerScript.AddNote(go);
-        Debug.Log("after addnote");
 
-        go.transform.position = new Vector3(GetPositionByKey(key), 10, 0);
+        go.transform.position = new Vector3(GetPositionByKey(key), -14, 18);
     }
 
     private int GetPositionByKey(string key)
@@ -58,16 +56,16 @@ public class NoteGenerator : MonoBehaviour
         switch(key)
         {
             case "q":
-                position = 1;
+                position = -9;
                 break;
             case "w":
-                position = 2;
+                position = 0;
                 break;
             case "e":
-                position = 3;
+                position = 9;
                 break;
             case "r":
-                position = 4;
+                position = 18;
                 break;
         }
 
