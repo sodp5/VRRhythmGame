@@ -51,49 +51,14 @@ public class NoteManager : MonoBehaviour
     private void ProcessKeyEvent()
     {
         musicManager.SendMessage("PlaySound", noteList[0].GetComponent<NoteModel>().scale);
+
+        RemoveNote();
+    }
+
+    public void RemoveNote()
+    {
         Destroy(noteList[0]);
         noteList.Remove(noteList[0]);
-        /*
-        switch (key)
-        {
-            case "q":
-                musicManager.SendMessage("PlaySound", "c");
-                break;
-            case "w":
-                musicManager.SendMessage("PlaySound", "cS");
-                break;
-            case "e":
-                musicManager.SendMessage("PlaySound", "d");
-                break;
-            case "r":
-                musicManager.SendMessage("PlaySound", "dS");
-                break;
-            case "t":
-                musicManager.SendMessage("PlaySound", "e");
-                break;
-            case "y":
-                musicManager.SendMessage("PlaySound", "f");
-                break;
-            case "a":
-                musicManager.SendMessage("PlaySound", "fS");
-                break;
-            case "s":
-                musicManager.SendMessage("PlaySound", "g");
-                break;
-            case "d":
-                musicManager.SendMessage("PlaySound", "gS");
-                break;
-            case "f":
-                musicManager.SendMessage("PlaySound", "a");
-                break;
-            case "g":
-                musicManager.SendMessage("PlaySound", "aS");
-                break;
-            case "h":
-                musicManager.SendMessage("PlaySound", "b");
-                break;
-        }
-        */
     }
 
     private bool IsFrontNote(string inputKey)

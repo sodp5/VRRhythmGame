@@ -19,8 +19,8 @@ public class MusicPlayer : MonoBehaviour
         ng = noteGenerator.GetComponent<NoteGenerator>();
         delta = 0f;
 
-        jukeBox = CreateSchoolBellQueue();
-        //jukeBox = CreateLittleStar();
+        jukeBox = CreateSchoolBell();
+        jukeBox = CreateLittleStar();
         //CreateLittleStar();
         //CreateSchoolBell();
     }
@@ -47,83 +47,6 @@ public class MusicPlayer : MonoBehaviour
 
         
     }
-
-    // 반짝반짝 작은별
-    private void CreateLittleStar2()
-    {
-        ng.CreateNote("q", "c");
-        ng.CreateNote("q", "c");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("r", "a");
-        ng.CreateNote("r", "a");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("e", "f");
-        ng.CreateNote("e", "f");
-        ng.CreateNote("w", "e");
-        ng.CreateNote("w", "e");
-        ng.CreateNote("q", "d");
-        ng.CreateNote("q", "d");
-        ng.CreateNote("q", "c");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("w", "f");
-        ng.CreateNote("w", "f");
-        ng.CreateNote("q", "e");
-        ng.CreateNote("q", "e");
-        ng.CreateNote("q", "d");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("w", "f");
-        ng.CreateNote("w", "f");
-        ng.CreateNote("q", "e");
-        ng.CreateNote("q", "e");
-        ng.CreateNote("q", "d");
-        ng.CreateNote("q", "c");
-        ng.CreateNote("q", "c");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("r", "a");
-        ng.CreateNote("r", "a");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("e", "f");
-        ng.CreateNote("e", "f");
-        ng.CreateNote("w", "e");
-        ng.CreateNote("w", "e");
-        ng.CreateNote("q", "d");
-        ng.CreateNote("q", "d");
-        ng.CreateNote("q", "c");
-    }
-
-    // 학교종이 땡땡떙
-    private void CreateSchoolBell()
-    {
-        ng.CreateNote("e", "g");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("r", "a");
-        ng.CreateNote("r", "a");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("w", "e");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("w", "e");
-        ng.CreateNote("w", "e");
-        ng.CreateNote("q", "d");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("r", "a");
-        ng.CreateNote("r", "a");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("w", "e");
-        ng.CreateNote("e", "g");
-        ng.CreateNote("w", "e");
-        ng.CreateNote("q", "d");
-        ng.CreateNote("w", "e");
-        ng.CreateNote("q", "c");
-    }
-
     private Queue<ValueInfo> CreateLittleStar()
     {
         Queue<ValueInfo> queue = new Queue<ValueInfo>();
@@ -176,7 +99,7 @@ public class MusicPlayer : MonoBehaviour
         return queue;
     }
 
-    private Queue<ValueInfo> CreateSchoolBellQueue()
+    private Queue<ValueInfo> CreateSchoolBell()
     {
         Queue<ValueInfo> queue = new Queue<ValueInfo>();
         float term = 0.5f;
