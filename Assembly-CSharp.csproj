@@ -63,8 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GameProcessor.cs" />
     <Compile Include="Assets\Scripts\MusicManager.cs" />
+    <Compile Include="Assets\Scripts\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\NoteGenerator.cs" />
     <Compile Include="Assets\Scripts\NoteManager.cs" />
     <Compile Include="Assets\Scripts\NoteModel.cs" />

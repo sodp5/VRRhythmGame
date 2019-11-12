@@ -46,7 +46,34 @@ public class NoteGenerator : MonoBehaviour
         var managerScript = noteManager.GetComponent<NoteManager>();
         managerScript.AddNote(go);
 
-        go.transform.position = new Vector3(GetPositionByKey(key), -14, 18);
+        go.transform.position = new Vector3(GetPositionByKey(key), -10, 18);
+        go.GetComponent<MeshRenderer>().material.color = GetColorByKey(key);
+    }
+
+    private Color GetColorByKey(string key)
+    {
+        Color color;
+
+        switch (key)
+        {
+            case "q":
+                color = Color.blue;
+                break;
+            case "w":
+                color = Color.green;
+                break;
+            case "e":
+                color = Color.yellow;
+                break;
+            case "r":
+                color = Color.red;
+                break;
+            default:
+                color = Color.white;
+                break;
+        }
+
+        return color;
     }
 
     private int GetPositionByKey(string key)

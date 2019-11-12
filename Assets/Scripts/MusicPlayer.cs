@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameProcessor : MonoBehaviour
+public class MusicPlayer : MonoBehaviour
 {
     private GameObject noteGenerator;
     private NoteGenerator ng;
@@ -20,6 +20,7 @@ public class GameProcessor : MonoBehaviour
         delta = 0f;
 
         jukeBox = CreateSchoolBellQueue();
+        //jukeBox = CreateLittleStar();
         //CreateLittleStar();
         //CreateSchoolBell();
     }
@@ -48,7 +49,7 @@ public class GameProcessor : MonoBehaviour
     }
 
     // 반짝반짝 작은별
-    private void CreateLittleStar()
+    private void CreateLittleStar2()
     {
         ng.CreateNote("q", "c");
         ng.CreateNote("q", "c");
@@ -121,6 +122,58 @@ public class GameProcessor : MonoBehaviour
         ng.CreateNote("q", "d");
         ng.CreateNote("w", "e");
         ng.CreateNote("q", "c");
+    }
+
+    private Queue<ValueInfo> CreateLittleStar()
+    {
+        Queue<ValueInfo> queue = new Queue<ValueInfo>();
+        float term = 0.3f;
+
+        queue.Enqueue(new ValueInfo("q", "c", term));
+        queue.Enqueue(new ValueInfo("q", "c", term));
+        queue.Enqueue(new ValueInfo("e", "g", term));
+        queue.Enqueue(new ValueInfo("e", "g", term));
+        queue.Enqueue(new ValueInfo("r", "a", term));
+        queue.Enqueue(new ValueInfo("r", "a", term));
+        queue.Enqueue(new ValueInfo("e", "g", term));
+        queue.Enqueue(new ValueInfo("e", "f", term));
+        queue.Enqueue(new ValueInfo("e", "f", term));
+        queue.Enqueue(new ValueInfo("w", "e", term));
+        queue.Enqueue(new ValueInfo("w", "e", term));
+        queue.Enqueue(new ValueInfo("q", "d", term));
+        queue.Enqueue(new ValueInfo("q", "d", term));
+        queue.Enqueue(new ValueInfo("q", "c", term));
+        queue.Enqueue(new ValueInfo("e", "g", term));
+        queue.Enqueue(new ValueInfo("e", "g", term));
+        queue.Enqueue(new ValueInfo("e", "f", term));
+        queue.Enqueue(new ValueInfo("e", "f", term));
+        queue.Enqueue(new ValueInfo("w", "e", term));
+        queue.Enqueue(new ValueInfo("w", "e", term));
+        queue.Enqueue(new ValueInfo("q", "d", term));
+        queue.Enqueue(new ValueInfo("e", "g", term));
+        queue.Enqueue(new ValueInfo("e", "g", term));
+        queue.Enqueue(new ValueInfo("e", "f", term));
+        queue.Enqueue(new ValueInfo("e", "f", term));
+        queue.Enqueue(new ValueInfo("w", "e", term));
+        queue.Enqueue(new ValueInfo("w", "e", term));
+        queue.Enqueue(new ValueInfo("q", "d", term));
+        queue.Enqueue(new ValueInfo("q", "c", term));
+        queue.Enqueue(new ValueInfo("q", "c", term));
+        queue.Enqueue(new ValueInfo("e", "g", term));
+        queue.Enqueue(new ValueInfo("e", "g", term));
+        queue.Enqueue(new ValueInfo("r", "a", term));
+        queue.Enqueue(new ValueInfo("r", "a", term));
+        queue.Enqueue(new ValueInfo("e", "g", term));
+        queue.Enqueue(new ValueInfo("e", "f", term));
+        queue.Enqueue(new ValueInfo("e", "f", term));
+        queue.Enqueue(new ValueInfo("w", "e", term));
+        queue.Enqueue(new ValueInfo("w", "e", term));
+        queue.Enqueue(new ValueInfo("q", "d", term));
+        queue.Enqueue(new ValueInfo("q", "d", term));
+        queue.Enqueue(new ValueInfo("q", "c", term));
+        queue.Enqueue(new ValueInfo("z", "z", term));
+
+        return queue;
     }
 
     private Queue<ValueInfo> CreateSchoolBellQueue()
