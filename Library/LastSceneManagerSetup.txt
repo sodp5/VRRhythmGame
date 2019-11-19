@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Tree9/tree9.unity
+- path: Assets/Scenes/StartScene.unity
   isLoaded: 1
   isActive: 1
