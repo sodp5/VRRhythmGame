@@ -7,8 +7,6 @@ public class NoteManager : MonoBehaviour
     private GameObject musicManager;
     private List<GameObject> noteList;
 
-    private string pressedKey;
-
     private void Awake()
     {
         if (noteList == null)
@@ -24,16 +22,19 @@ public class NoteManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pressedKey = Input.inputString;
 
-        if (!IsExistNote()) 
+    }
+
+    public void pressKey(string pressedKey)
+    {
+        if (!IsExistNote())
         {
-            Debug.Log("not exist note");
+            //Debug.Log("not exist note");
             return;
         }
         if (!IsFrontNote(pressedKey))
         {
-            Debug.Log("is not Front Note");
+            //Debug.Log("is not Front Note");
             return;
         }
 

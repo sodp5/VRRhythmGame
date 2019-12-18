@@ -30,7 +30,7 @@ public class MusicPlayer : MonoBehaviour
     {
         if (jukeBox.Count <= 0)
         {
-            Debug.Log("Empty Queue!");
+            //Debug.Log("Empty Queue!");
             return;
         }
         if (delta == 0)
@@ -40,7 +40,7 @@ public class MusicPlayer : MonoBehaviour
 
         if (delta > v.delay)
         {
-            Debug.Log("delta over...");
+            //Debug.Log("delta over...");
             delta = 0f;
             ng.CreateNote(v.key, v.scale);
         }

@@ -23,7 +23,7 @@ public class NoteModel : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target, 0.5f);
         if (transform.position == target)
         {
-            Debug.Log("arrive~~");
+            //Debug.Log("arrive~~");
             noteManager.RemoveNote();
         }
     }
